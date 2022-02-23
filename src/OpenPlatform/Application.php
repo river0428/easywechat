@@ -28,6 +28,7 @@ use function EasyWeChat\Kernel\data_get;
  * @method mixed createPreAuthorizationCode()
  * @method mixed setPrivacySetting(array $data)
  * @method mixed getPrivacySetting(array $data)
+ * @method mixed justPost(string $url, array $data)
  */
 class Application extends ServiceContainer
 {
