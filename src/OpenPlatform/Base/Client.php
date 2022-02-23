@@ -173,7 +173,7 @@ class Client extends BaseClient
      */
     public function setPrivacySetting(array $data)
     {
-        return $this->httpPostJson('cgi-bin/component/setprivacysetting', $data);
+        return $this->httpPost('cgi-bin/component/setprivacysetting', $data);
     }
 
     /**
@@ -184,7 +184,7 @@ class Client extends BaseClient
      */
     public function getPrivacySetting(array $data)
     {
-        return $this->httpPostJson('cgi-bin/component/getprivacysetting', $data);
+        return $this->httpPost('cgi-bin/component/getprivacysetting', $data);
     }
 
     /**
@@ -195,6 +195,18 @@ class Client extends BaseClient
      * @throws \EasyWeChat\Kernel\Exceptions\InvalidConfigException
      */
     public function justPost(string $url, array $data)
+    {
+        return $this->httpPost($url, $data);
+    }
+
+    /**
+     * 自定义请求json
+     * @param string $url
+     * @param array $data
+     * @return array|\EasyWeChat\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @throws \EasyWeChat\Kernel\Exceptions\InvalidConfigException
+     */
+    public function justPostJson(string $url, array $data)
     {
         return $this->httpPostJson($url, $data);
     }
