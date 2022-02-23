@@ -167,22 +167,22 @@ class Client extends BaseClient
     /**
      * set privacy setting
      *
-     * @param $data
+     * @param array $data
      * @return array|\EasyWeChat\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      * @throws \EasyWeChat\Kernel\Exceptions\InvalidConfigException
      */
-    public function setPrivacySetting($data)
+    public function setPrivacySetting(array $data)
     {
         return $this->httpPostJson('component/setprivacysetting', $data);
     }
 
     /**
      * get privacy setting
-     * @param $data
+     * @param array $data
      * @return array|\EasyWeChat\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      * @throws \EasyWeChat\Kernel\Exceptions\InvalidConfigException
      */
-    public function getPrivacySetting($data)
+    public function getPrivacySetting(array $data)
     {
         return $this->httpPostJson('component/getprivacysetting', $data);
     }

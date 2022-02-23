@@ -26,6 +26,8 @@ use function EasyWeChat\Kernel\data_get;
  * @method mixed setAuthorizerOption(string $appId, string $name, string $value)
  * @method mixed getAuthorizers(int $offset = 0, int $count = 500)
  * @method mixed createPreAuthorizationCode()
+ * @method mixed setPrivacySetting(array $data)
+ * @method mixed getPrivacySetting(array $data)
  */
 class Application extends ServiceContainer
 {
