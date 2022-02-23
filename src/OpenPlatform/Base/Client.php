@@ -163,4 +163,27 @@ class Client extends BaseClient
 
         return $this->httpPostJson('cgi-bin/component/clear_quota', $params);
     }
+
+    /**
+     * set privacy setting
+     *
+     * @param $data
+     * @return array|\EasyWeChat\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @throws \EasyWeChat\Kernel\Exceptions\InvalidConfigException
+     */
+    public function setPrivacySetting($data)
+    {
+        return $this->httpPostJson('component/setprivacysetting', $data);
+    }
+
+    /**
+     * get privacy setting
+     * @param $data
+     * @return array|\EasyWeChat\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
+     * @throws \EasyWeChat\Kernel\Exceptions\InvalidConfigException
+     */
+    public function getPrivacySetting($data)
+    {
+        return $this->httpPostJson('component/getprivacysetting', $data);
+    }
 }
